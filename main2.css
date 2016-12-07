@@ -1,0 +1,216 @@
+.mainpg {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    background-color: antiquewhite;
+    min-height: 100%;
+}
+
+.content .registerform {
+    padding: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+    background-color:lightgrey;
+}
+
+.slideshow {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    background-color: cornflowerblue;
+}
+
+.categoria {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.content_page {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.prod {
+    margin-top: 20px;
+    height: 200px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px #222;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.prod h4 {
+    position: absolute; 
+    top: 125px; 
+    left: 0;
+    width: 100%;
+    color: white; 
+    font: bold 20px Helvetica, Sans-Serif;   
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.categ_comput {
+    background-color: #333;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.categ_compon {
+    background-color: #555;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.categ_perif {
+    background-color: crimson;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.categ_armaz {
+    background-color: darkgray;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.categ_title {
+    display: inline-block;
+    font-size: 20pt;
+    color: white;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.loginmenu .form-group {
+    width: 200px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.loginmenu .checkbox {
+    padding: 20px;
+}
+
+.loginmenu button {
+    margin-left: 20px;
+}
+
+.loginmenu .note {
+    margin-left: 10px;
+}
+
+.registerform .regbutton {
+    float: right;
+}
+
+.loggedmenu {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.loggedmenu p {
+    padding-top: 20px;
+}
+
+.loggedmenu button {
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+div .success {
+    font-family: sans-serif;
+}
+
+.content .end {
+    color: #FFF;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+    padding: 50px;
+    background-color: #222;
+}
+
+.content .productcontent {
+    background-color: #333;
+    padding-bottom: 100px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content .productcontent .product_img {
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px #222;
+}
+
+.content .productcontent .product_desc {
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 5px #222;
+}
+
+.product_desc p, .product_desc h2 {
+    padding: 20px;
+}
+
+.productcontent .addbuy_btn {
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.add_btn {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    height: 100px;
+    background-color: #29c436;
+}
+
+.buy_btn {
+    text-align: center; 
+    color: white;
+    font-weight: bolder;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+
+.price {
+    padding-left: 20px;
+}
