@@ -73,8 +73,20 @@
             <ul class="nav navbar-nav navbar-right"> 
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="glyphicon glyphicon-user">
-                        </span>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <div class="searchmenu">
+                            <form action="search.php" method="get">
+                                <input class="searchinput" type="text" name="searchtext" size="30" autofocus="autofocus">
+                                <button type="submit" name="searchsubmit" class="btn btn-default">Procurar</button>
+                            </form>
+                        </div>
+                    </ul> 
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-user"></span>
                         <?php 
                         if (empty($_SESSION["logged"])) {
                             echo 'Login';
