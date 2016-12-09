@@ -134,9 +134,22 @@
                         Carrinho
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a></li>
-                        <li><a href="#">Item 3</a></li>
+                        <?php
+                        
+                            if (!empty($cart)) {
+                                $cart = implode(", ", $item_list);
+                                $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (". $item_list .")";
+                                $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
+                                if ($response_cart) {
+                                    while ($row = mysqli_fetch_array($response_cart)) {
+                                        echo '<div class="itemcart">'. $row["1"] .'</div>';
+                                    }
+                                }
+                            } else {
+                                echo 'cart empty';
+                            }
+                        ?>
+                        
                         <li><a href="#">Checkout</a></li>
                     </ul>
                 </li>
