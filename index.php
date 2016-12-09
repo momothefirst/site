@@ -8,6 +8,8 @@
     $response_compon = @mysqli_query($dbc, $query_componentes);
     $response_armaz = @mysqli_query($dbc, $query_armazenamento);
     $response_perif = @mysqli_query($dbc, $query_perifericos);
+    $cart = array();
+    $_SESSION['cart']=$cart;
 ?>
 
 <html lang="en">

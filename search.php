@@ -28,7 +28,7 @@
         </div>
         <div class="content_page">
             <div class="row">
-                    <p><span class=categ_title><?php echo $_GET["searchtext"]; ?></span></p>
+                    <p><span class=categ_title><?php echo 'Resultados para: ' . $_GET["searchtext"]; ?></span></p>
             
                     <?php
                         if ($response_search) {
