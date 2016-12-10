@@ -8,8 +8,8 @@
     $response_compon = @mysqli_query($dbc, $query_componentes);
     $response_armaz = @mysqli_query($dbc, $query_armazenamento);
     $response_perif = @mysqli_query($dbc, $query_perifericos);
-    $cart = array();
-    $_SESSION['cart']=$cart;
+    if(empty($_SESSION['cart']))
+        $_SESSION['cart'] = $cart;
 ?>
 
 <html lang="en">
@@ -47,7 +47,9 @@
                                     <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . '</h4></div>
                                 </div></a>';
                     }
-                }  
+                }   else {
+                    echo '<script>alert("erro");</script>';
+                }
             ?>    
         </div>
     </div>

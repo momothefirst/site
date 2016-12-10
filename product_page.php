@@ -55,7 +55,7 @@
                 <a href="#"><div class="add_btn">Adicionar aos favoritos</div></a>
               </div>
               <div class="col-sm-6">
-                <div class="buy_btn">Adicionar ao carrinho</div>
+                <a href="addcart.php?id=<?php echo $prod_id ?>"><div class="buy_btn">Adicionar ao carrinho</div></a>
               </div>
             </div>
           </div>
