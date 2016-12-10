@@ -135,10 +135,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <?php
-                        
-                            if (!empty($cart)) {
-                                $cart = implode(", ", $item_list);
-                                $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (". $item_list .")";
+                            if (!empty($_SESSION['cart'])) {
+                                $item_list = implode(",", $_SESSION['cart']);
+                                $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$item_list.")";
                                 $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
                                 if ($response_cart) {
                                     while ($row = mysqli_fetch_array($response_cart)) {
