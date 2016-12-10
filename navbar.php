@@ -134,22 +134,23 @@
                         Carrinho
                     </a>
                     <ul class="dropdown-menu">
-                        <?php
-                            if (!empty($_SESSION['cart'])) {
-                                $item_list = implode(",", $_SESSION['cart']);
-                                $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$item_list.")";
-                                $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
-                                if ($response_cart) {
-                                    while ($row = mysqli_fetch_array($response_cart)) {
-                                        echo '<div class="itemcart">'. $row["1"] .'</div>';
+                        <div class="cartmenu">
+                            <?php
+                                if (!empty($_SESSION['cart'])) {
+                                    $item_list = implode(",", $_SESSION['cart']);
+                                    $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$item_list.")";
+                                    $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
+                                    if ($response_cart) {
+                                        while ($row = mysqli_fetch_array($response_cart)) {
+                                            echo '<li class="itemcart"><a href="#">'. $row["1"] .'</a></li>';
+                                        }
                                     }
+                                } else {
+                                    echo 'cart empty';
                                 }
-                            } else {
-                                echo 'cart empty';
-                            }
-                        ?>
-                        
-                        <li><a href="#">Checkout</a></li>
+                            ?>
+                            <li><a href="#">Checkout</a></li>
+                        </div>
                     </ul>
                 </li>
             </ul>

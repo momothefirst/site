@@ -45,7 +45,7 @@
                 if ($response_comput) {
                     while ($row = mysqli_fetch_array($response_comput)) {
                         echo    '<a href="product_page.php?id=' . $row["id"] . '"><div class="col-md-3 prodimage">
-                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . '</h4></div>
+                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . ' <span class="prodprice">'.$row["price"].'€</span></h4></div>
                                 </div></a>';
                     }
                 }   else {
@@ -67,7 +67,7 @@
                 if ($response_compon) {
                     while ($row = mysqli_fetch_array($response_compon)) {
                         echo    '<a href="product_page.php?id=' . $row["id"] . '"><div class="col-md-3 prodimage">
-                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . '</h4></div>
+                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . ' <span class="prodprice">'.$row["price"].'€</span></h4></div>
                                 </div></a>';
                     }
                 }  
@@ -84,7 +84,7 @@
                 if ($response_perif) {
                     while ($row = mysqli_fetch_array($response_perif)) {
                         echo    '<a href="product_page.php?id=' . $row["id"] . '"><div class="col-md-3 prodimage">
-                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . '</h4></div>
+                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"]. ' <span class="prodprice">'.$row["price"].'€</span></h4></div>
                                 </div></a>';
                     }
                 }  
@@ -101,7 +101,7 @@
                 if ($response_armaz) {
                     while ($row = mysqli_fetch_array($response_armaz)) {
                         echo    '<a href="product_page.php?id=' . $row["id"] . '"><div class="col-md-3 prodimage">
-                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . '</h4></div>
+                                    <div class="col-md-12 prod"><img src="'.$row["img"] .'" alt="" /><h4>' . $row["nome"] . ' <span class="prodprice">'.$row["price"].'€</span></h4></div>
                                 </div></a>';
                     }
                 }  

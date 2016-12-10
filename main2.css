@@ -64,8 +64,9 @@ img {
     top: 125px; 
     left: 0;
     width: 100%;
+    height: 65px;
     color: white; 
-    font: bold 20px Helvetica, Sans-Serif;   
+    font: 16px Helvetica, Sans-Serif;   
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
@@ -78,7 +79,7 @@ img {
 }
 
 .categ_compon {
-    background-color: #555;
+    background-color: forestgreen;
     padding-bottom: 20px;
     box-shadow: 5px 5px 5px #888888;
 }
@@ -150,6 +151,18 @@ img {
     margin-bottom: 20px;
 }
 
+.cartmenu {
+    width: 200px;
+}
+
+.itemcart {
+    padding: 10px;
+}
+
+.itemcart:hover {
+    background-color: lightgray;
+}
+
 div .success {
     font-family: sans-serif;
 }
@@ -188,7 +201,7 @@ div .success {
     margin-top: 100px;
     margin-right: 50px;
     margin-left: 50px;
-    background-color: #FFFFFF;
+    background-color: lightgray;
     box-shadow: 5px 5px 5px #222;
 }
 
@@ -217,6 +230,14 @@ div .success {
     font-weight: bolder;
     height: 100px;
     background-color: cornflowerblue;
+}
+
+.prodprice {
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute; 
+    bottom: 10px;
+    right: 10px;
 }
 
 .price {
