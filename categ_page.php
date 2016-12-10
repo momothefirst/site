@@ -43,7 +43,7 @@
                             // echo '<script>alert("response ok - rows:'.$numrows.'");</script>';
                             while ($row = mysqli_fetch_array($response_cat)) {
                                 echo    '<a href="product_page.php?id=' . $row["0"] . '"><div class="col-md-3 prodimage">
-                                            <div class="col-md-12 prod"><img src="'.$row["4"] .'" alt="" /><h4>' . $row["1"] . '</h4></div>
+                                            <div class="col-md-12 prod"><img src="'.$row["4"] .'" alt="" /><h4>' . $row["1"] . ' <span class="prodprice">'.$row["3"].'€</span></h4></div>
                                         </div></a>';                                
                             }
                         } else {

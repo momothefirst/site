@@ -142,7 +142,7 @@
                                     $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
                                     if ($response_cart) {
                                         while ($row = mysqli_fetch_array($response_cart)) {
-                                            echo '<li class="itemcart"><a href="#">'. $row["1"] .'</a></li>';
+                                            echo '<li class="itemcart"><a href="product_page.php?id='.$row["0"].'">'. $row["1"] .'</a></li>';
                                         }
                                     }
                                 } else {

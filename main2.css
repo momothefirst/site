@@ -72,6 +72,14 @@ img {
     padding: 10px;
 }
 
+.prodprice {
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute; 
+    bottom: 10px;
+    right: 10px;
+}
+
 .categ_comput {
     background-color: #333;
     padding-bottom: 20px;
@@ -209,6 +217,10 @@ div .success {
     padding: 20px;
 }
 
+.product_desc h2, h3 {
+    font-weight: bold;
+}
+
 .productcontent .addbuy_btn {
     height: 100px;
     margin-top: 20px;
@@ -232,14 +244,9 @@ div .success {
     background-color: cornflowerblue;
 }
 
-.prodprice {
-    font-weight: bold;
-    font-size: 14px;
-    position: absolute; 
-    bottom: 10px;
-    right: 10px;
-}
+
 
 .price {
-    padding-left: 20px;
+    padding: 20px;
+    
 }
