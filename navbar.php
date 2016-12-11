@@ -131,7 +131,12 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="glyphicon glyphicon-shopping-cart">
                         </span>
-                        Carrinho
+                        Carrinho  
+                        <?php
+                                if (!empty($_SESSION['cart'])) {
+                                    echo '(' .count($_SESSION['cart']) .')';
+                                }
+                        ?>
                     </a>
                     <ul class="dropdown-menu">
                         <div class="cartmenu">
@@ -149,10 +154,13 @@
                                         }
                                     }
                                 } else {
-                                    echo 'cart empty';
+                                    echo 'Carrinho vazio, adicione items!';
                                 }
                             ?>
-                            <br><li class="total">Total: <?php echo $total ?>€</li><br>
+                            <br><li class="total">Total: <?php
+                                if (!empty($_SESSION['cart']))
+                                    echo number_format($total, 2); 
+                            ?>€</li><br>
                             <li><button class="checkout_btn btn btn-default">Checkout</button></a></li>
                         </div>
                     </ul>

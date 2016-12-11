@@ -24,8 +24,8 @@
         </div>
         <div class="content_page">
             <div class="row">
-                    <p><span class=categ_title><?php echo '<span class="glyphicon glyphicon-shopping-cart">
-                        </span> O Meu Carrinho'; ?></span></p>
+                    <p><span class=categ_title><span class="glyphicon glyphicon-shopping-cart">
+                        </span> O Meu Carrinho</span><button class="emptycart "><span class="glyphicon glyphicon-remove"></span> Apagar Carrinho</button></p>
             
                     <?php
                         if (!empty($_SESSION['cart'])) {
@@ -40,8 +40,7 @@
                                      </div></a>';
                                     $total = $total + $row["2"];
                                 }
-                               
-                            } 
+                            }
                         } else {
                                 echo 'cart empty';
                             }
@@ -57,7 +56,12 @@
 </div>
     
     
-    
+<script>
+    $('.emptycart').click(function() {
+        <?php unset($_SESSION['cart']); ?> 
+        location.reload(true);
+    });
+</script>
     
     
 </body>
