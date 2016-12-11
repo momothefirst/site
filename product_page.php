@@ -52,10 +52,10 @@
           <div class="addbuy_btn">
             <div class="row">
               <div class="col-sm-6">
-                <a href="#"><div class="add_btn">Adicionar aos favoritos</div></a>
+                <a href="#"><button class="add_btn"><span class="glyphicon glyphicon-heart"></span>  Adicionar aos favoritos</button></a>
               </div>
               <div class="col-sm-6">
-                <a href="addcart.php?id=<?php echo $prod_id ?>"><div class="buy_btn">Adicionar ao carrinho</div></a>
+                <a href="addcart.php?id=<?php echo $prod_id ?>"><button class="buy_btn"><span class="glyphicon glyphicon-tags"></span> Comprar</button></a>
               </div>
             </div>
           </div>

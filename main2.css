@@ -114,10 +114,8 @@ img {
 }
 
 .loginmenu .form-group {
-    width: 200px;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 300px;
+    padding: 20px;
 }
 
 .loginmenu .checkbox {
@@ -161,6 +159,7 @@ img {
 
 .cartmenu {
     width: 200px;
+    padding: 10px;
 }
 
 .itemcart {
@@ -169,6 +168,33 @@ img {
 
 .itemcart:hover {
     background-color: lightgray;
+}
+
+.checkout_btn {
+    font-weight: bold !important;
+    background: limegreen !important; 
+    color: white !important;
+}
+
+.seecart {
+    width: 100%;
+    font-weight: bold !important;
+    background: dodgerblue !important;
+    color: white !important;
+}
+
+.carttotal {
+    display: block;
+    color: white;
+    float: right;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}
+
+.total {
+    font-weight: bold;
 }
 
 div .success {
@@ -232,7 +258,8 @@ div .success {
     text-align: center;
     color: white;
     font-weight: bolder;
-    height: 100px;
+    height: 60px;
+    width: 100%;
     background-color: #29c436;
 }
 
@@ -240,11 +267,14 @@ div .success {
     text-align: center; 
     color: white;
     font-weight: bolder;
-    height: 100px;
+    height: 60px;
+    width: 100%;
     background-color: cornflowerblue;
 }
 
-
+.glyphicon {
+    font-size: 18px;
+}
 
 .price {
     padding: 20px;
