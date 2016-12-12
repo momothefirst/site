@@ -25,7 +25,7 @@
         <div class="content_page">
             <div class="row">
                     <p><span class=categ_title><span class="glyphicon glyphicon-shopping-cart">
-                        </span> O Meu Carrinho</span><button class="emptycart "><span class="glyphicon glyphicon-remove"></span> Apagar Carrinho</button></p>
+                        </span> O Meu Carrinho</span><button id="emptycart"><span class="glyphicon glyphicon-remove"></span> Apagar Carrinho</button></p>
             
                     <?php
                         if (!empty($_SESSION['cart'])) {
@@ -56,9 +56,10 @@
 </div>
     
     
-<script>
-    $('.emptycart').click(function() {
-        <?php unset($_SESSION['cart']); ?> 
+<script type="text/javascript">
+    $('#emptycart').click(function() {
+        $.get("cleancart.php");
+        return false;
         location.reload(true);
     });
 </script>
