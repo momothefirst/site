@@ -265,6 +265,16 @@ div .success {
     margin-left: 50px;
 }
 
+.qtdtext {
+    color: white;
+    font-size: 16px;
+}
+
+.qtdinput {
+    padding: 5px;
+    width: 50px;
+}
+
 .add_btn {
     text-align: center;
     color: white;

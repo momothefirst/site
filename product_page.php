@@ -54,10 +54,10 @@
                   <input type="hidden" name="id" value="<?php echo $prod_id ?>">
                 <div class="row">
                   <div class="col-sm-6">
-                    Quantidade: 
+                    <span class="qtdtext">Quantidade: </span><input class="qtdinput" type="number" name="qtd" min="1" step="1" value="1">
                   </div>
                   <div class="col-sm-6">
-                    <button class="buy_btn" type="submit" name="buy"><span class="glyphicon glyphicon-tags"></span> Comprar</button></a>
+                    <button class="buy_btn" type="submit"><span class="glyphicon glyphicon-tags"></span> Comprar</button></a>
                   </div>
                 </div>
               </form>
