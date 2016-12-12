@@ -50,14 +50,17 @@
           </div>
 
           <div class="addbuy_btn">
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="#"><button class="add_btn"><span class="glyphicon glyphicon-heart"></span>  Adicionar aos favoritos</button></a>
-              </div>
-              <div class="col-sm-6">
-                <a href="addcart.php?id=<?php echo $prod_id ?>"><button class="buy_btn"><span class="glyphicon glyphicon-tags"></span> Comprar</button></a>
-              </div>
-            </div>
+              <form action="addcart.php" method="get">
+                  <input type="hidden" name="id" value="<?php echo $prod_id ?>">
+                <div class="row">
+                  <div class="col-sm-6">
+                    Quantidade: 
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="buy_btn" type="submit" name="buy"><span class="glyphicon glyphicon-tags"></span> Comprar</button></a>
+                  </div>
+                </div>
+              </form>
           </div>
 
         </div>
