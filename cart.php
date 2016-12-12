@@ -60,7 +60,7 @@
     $('#emptycart').click(function() {
         $.get("cleancart.php");
         return false;
-        location.reload(true);
+        window.location.reload(true);
     });
 </script>
     
