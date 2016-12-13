@@ -162,6 +162,13 @@ img {
     padding: 10px;
 }
 
+.cartlist {
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-right: 0px;
+    background-color: beige !important;
+}
+
 .itemcart {
     padding: 10px;
 }
@@ -206,6 +213,12 @@ img {
 
 .total {
     font-weight: bold;
+}
+
+.carttotal {
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: black;
 }
 
 div .success {

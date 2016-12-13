@@ -50,11 +50,41 @@
                     }
                 ?>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-3 cartlist">
+                <?php
+                    if (!empty($_SESSION['cart']['id'])) {
+                        $str = "";
+                        foreach ($_SESSION['cart']['id'] as $id) {
+                            $str .= $id . ",";
+                        }
+                        $str = rtrim($str, ',');
+                        //echo '<script>alert("str:'. $str .'")</script>';
+                        //echo '<script>alert("id:'. $_SESSION['cart']['id'][0] .'")</script>';
+                        $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$str.")";
+                        $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
+                        $total = 0;
+                        if ($response_cart) {
+                            while ($row = mysqli_fetch_array($response_cart)) {
+                                foreach ($_SESSION['cart']['id'] as $id) {
+                                    if ($id == $row["0"]) {
+                                        //echo '<script>alert("str:'. current($_SESSION['cart']['id']) .'")</script>';
+                                        $qtd = array_search($id, $_SESSION['cart']['id']);
+                                    }
+                                }
+                                echo '<li class="itemcart"><a href="product_page.php?id='.$row["0"].'">'. $_SESSION['cart']['qtd'][$qtd] . 'x ' .  $row["1"] .  '</a></li>';
+                                $total = $total + $row["2"] * $_SESSION['cart']['qtd'][$qtd];
+                            }
+                        }
+                        echo '<div class="carttotal">Total: '.number_format($total, 2).'€</div>';
+                    } else {
+                        echo 'Carrinho vazio, adicione items!';
+                    }
+                ?>
+            </div>
                 
         </div>
         <div class="row">
-            <?php echo '<div class="carttotal">Total: '.number_format($total, 2).'€</div>'; ?>
+            <?php  ?>
         </div>
     </div>
     <?php include 'footer.php'; ?>  
