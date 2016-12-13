@@ -26,7 +26,7 @@
         <div class="row">
                 <p><span class=categ_title><span class="glyphicon glyphicon-shopping-cart">
                     </span> O Meu Carrinho</span><button id="emptycart"><span class="glyphicon glyphicon-remove"></span> Apagar Carrinho</button></p>
-
+            <div class="col-md-9">
                 <?php
                     if (!empty($_SESSION['cart'])) {
                         $str = "";
@@ -42,13 +42,16 @@
                                 echo    '<a href="product_page.php?id=' . $row["0"] . '"><div class="col-md-3 prodimage">
                                 <div class="col-md-12 prod"><img src="'.$row["3"] .'" alt="" /><h4>' . $row["1"] . ' <span class="prodprice">'.$row["2"].'€</span></h4></div>
                                  </div></a>';
-                                $total = $total + $row["2"];
+                                $total = $total + $row["2"] * $_SESSION['cart']['qtd'][$qtd];
                             }
                         }
                     } else {
                         echo 'cart empty';
                     }
                 ?>
+            </div>
+            <div class="col-md-3"></div>
+                
         </div>
         <div class="row">
             <?php echo '<div class="carttotal">Total: '.number_format($total, 2).'€</div>'; ?>

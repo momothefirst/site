@@ -142,7 +142,7 @@
                         <div class="cartmenu">
                             <li><a href="cart.php"><button class="btn btn-default seecart">Ver carrinho</button></a></li>
                             <?php
-                                if (!empty($_SESSION['cart']["id"])) {
+                                if (!empty($_SESSION['cart']['id'])) {
                                     $str = "";
                                     foreach ($_SESSION['cart']['id'] as $id) {
                                         $str .= $id . ",";
@@ -155,8 +155,14 @@
                                     $total = 0;
                                     if ($response_cart) {
                                         while ($row = mysqli_fetch_array($response_cart)) {
-                                            echo '<li class="itemcart"><a href="product_page.php?id='.$row["0"].'">'. $row["1"] .'</a></li>';
-                                            $total = $total + $row["2"];
+                                            foreach ($_SESSION['cart']['id'] as $id) {
+                                                if ($id == $row["0"]) {
+                                                    //echo '<script>alert("str:'. current($_SESSION['cart']['id']) .'")</script>';
+                                                    $qtd = array_search($id, $_SESSION['cart']['id']);
+                                                }
+                                            }
+                                            echo '<li class="itemcart"><a href="product_page.php?id='.$row["0"].'">'. $_SESSION['cart']['qtd'][$qtd] . 'x ' .  $row["1"] .  '</a></li>';
+                                            $total = $total + $row["2"] * $_SESSION['cart']['qtd'][$qtd];
                                         }
                                     }
                                 } else {
