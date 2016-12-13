@@ -50,14 +50,17 @@
           </div>
 
           <div class="addbuy_btn">
-            <div class="row">
-              <div class="col-sm-6">
-                <a href="#"><div class="add_btn">Adicionar aos favoritos</div></a>
-              </div>
-              <div class="col-sm-6">
-                <a href="addcart.php?id=<?php echo $prod_id ?>"><div class="buy_btn">Adicionar ao carrinho</div></a>
-              </div>
-            </div>
+              <form action="addcart.php" method="get">
+                  <input type="hidden" name="id" value="<?php echo $prod_id ?>">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <span class="qtdtext">Quantidade: </span><input class="qtdinput" type="number" name="qtd" min="1" step="1" value="1">
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="buy_btn" type="submit"><span class="glyphicon glyphicon-tags"></span> Comprar</button></a>
+                  </div>
+                </div>
+              </form>
           </div>
 
         </div>

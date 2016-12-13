@@ -129,27 +129,46 @@
                 </li>
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="glyphicon glyphicon-log-in">
+                        <span class="glyphicon glyphicon-shopping-cart">
                         </span>
-                        Carrinho
+                        Carrinho  
+                        <?php
+                                if (!empty($_SESSION['cart'])) {
+                                    echo '(' .count($_SESSION['cart']['id']) .')';
+                                }
+                        ?>
                     </a>
                     <ul class="dropdown-menu">
-                        <?php
-                            if (!empty($_SESSION['cart'])) {
-                                $item_list = implode(",", $_SESSION['cart']);
-                                $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$item_list.")";
-                                $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
-                                if ($response_cart) {
-                                    while ($row = mysqli_fetch_array($response_cart)) {
-                                        echo '<div class="itemcart">'. $row["1"] .'</div>';
+                        <div class="cartmenu">
+                            <li><a href="cart.php"><button class="btn btn-default seecart">Ver carrinho</button></a></li>
+                            <?php
+                                if (!empty($_SESSION['cart']["id"])) {
+                                    $str = "";
+                                    foreach ($_SESSION['cart']['id'] as $id) {
+                                        $str .= $id . ",";
                                     }
+                                    $str = rtrim($str, ',');
+                                    //echo '<script>alert("str:'. $str .'")</script>';
+                                    //echo '<script>alert("id:'. $_SESSION['cart']['id'][0] .'")</script>';
+                                    $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$str.")";
+                                    $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
+                                    $total = 0;
+                                    if ($response_cart) {
+                                        while ($row = mysqli_fetch_array($response_cart)) {
+                                            echo '<li class="itemcart"><a href="product_page.php?id='.$row["0"].'">'. $row["1"] .'</a></li>';
+                                            $total = $total + $row["2"];
+                                        }
+                                    }
+                                } else {
+                                    echo 'Carrinho vazio, adicione items!';
                                 }
-                            } else {
-                                echo 'cart empty';
-                            }
-                        ?>
-                        
-                        <li><a href="#">Checkout</a></li>
+                            ?>
+                            <br><li class="total">Total: <?php
+                                if (!empty($_SESSION['cart']))
+                                    echo number_format($total, 2); 
+                            ?>€</li><br>
+                            <li><button class="checkout_btn btn btn-default">Checkout</button></a></li>
+                        </div>
                     </ul>
                 </li>
             </ul>

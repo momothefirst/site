@@ -64,11 +64,20 @@ img {
     top: 125px; 
     left: 0;
     width: 100%;
+    height: 65px;
     color: white; 
-    font: bold 20px Helvetica, Sans-Serif;   
+    font: 16px Helvetica, Sans-Serif;   
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
+}
+
+.prodprice {
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute; 
+    bottom: 10px;
+    right: 10px;
 }
 
 .categ_comput {
@@ -78,7 +87,7 @@ img {
 }
 
 .categ_compon {
-    background-color: #555;
+    background-color: forestgreen;
     padding-bottom: 20px;
     box-shadow: 5px 5px 5px #888888;
 }
@@ -105,10 +114,8 @@ img {
 }
 
 .loginmenu .form-group {
-    width: 200px;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 250px;
+    padding: 20px;
 }
 
 .loginmenu .checkbox {
@@ -150,6 +157,57 @@ img {
     margin-bottom: 20px;
 }
 
+.cartmenu {
+    width: 250px;
+    padding: 10px;
+}
+
+.itemcart {
+    padding: 10px;
+}
+
+.itemcart:hover {
+    background-color: lightgray;
+}
+
+#emptycart {
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 5px;
+    float: right;
+    font-weight: bold !important;
+    background: darkred !important; 
+    color: white !important;
+}
+
+.checkout_btn {
+    font-weight: bold !important;
+    background: limegreen !important; 
+    color: white !important;
+}
+
+.seecart {
+    width: 100%;
+    font-weight: bold !important;
+    background: dodgerblue !important;
+    color: white !important;
+    margin-bottom: 20px !important;
+}
+
+.carttotal {
+    display: block;
+    color: white;
+    float: right;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}
+
+.total {
+    font-weight: bold;
+}
+
 div .success {
     font-family: sans-serif;
 }
@@ -188,12 +246,16 @@ div .success {
     margin-top: 100px;
     margin-right: 50px;
     margin-left: 50px;
-    background-color: #FFFFFF;
+    background-color: lightgray;
     box-shadow: 5px 5px 5px #222;
 }
 
 .product_desc p, .product_desc h2 {
     padding: 20px;
+}
+
+.product_desc h2, h3 {
+    font-weight: bold;
 }
 
 .productcontent .addbuy_btn {
@@ -203,11 +265,23 @@ div .success {
     margin-left: 50px;
 }
 
+.qtdtext {
+    color: white;
+    font-size: 16px;
+}
+
+.qtdinput {
+    padding: 5px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
 .add_btn {
     text-align: center;
     color: white;
     font-weight: bolder;
-    height: 100px;
+    height: 60px;
+    width: 100%;
     background-color: #29c436;
 }
 
@@ -215,10 +289,16 @@ div .success {
     text-align: center; 
     color: white;
     font-weight: bolder;
-    height: 100px;
+    height: 60px;
+    width: 100%;
     background-color: cornflowerblue;
 }
 
+.glyphicon {
+    font-size: 15px;
+}
+
 .price {
-    padding-left: 20px;
+    padding: 20px;
+    
 }
