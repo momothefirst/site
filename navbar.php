@@ -134,7 +134,7 @@
                         Carrinho  
                         <?php
                                 if (!empty($_SESSION['cart'])) {
-                                    echo '(' .count($_SESSION['cart']) .')';
+                                    echo '(' .count($_SESSION['cart']['id']) .')';
                                 }
                         ?>
                     </a>
@@ -142,9 +142,17 @@
                         <div class="cartmenu">
                             <li><a href="cart.php"><button class="btn btn-default seecart">Ver carrinho</button></a></li>
                             <?php
-                                if (!empty($_SESSION['cart'])) {
-                                    $item_list = implode(",", $_SESSION['cart']);
-                                    $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$item_list.")";
+                                if (!empty($_SESSION['cart']["id"])) {
+                                    $str = "";
+                                    foreach ($_SESSION['cart']['id'] as $id) {
+                                        $str .= $id + ",";
+                                    }
+                                    $str = trim($str, ',');
+                                    //echo var_dump($_SESSION['cart']['id']);
+                                    //$item_list = implode(",", array_column($_SESSION['cart'], 'id'));
+                                    echo '<script>alert("str:'. $str .'")</script>';
+                                    echo '<script>alert("id:'. $_SESSION['cart']['id'][0] .'")</script>';
+                                    $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$str.")";
                                     $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
                                     $total = 0;
                                     if ($response_cart) {

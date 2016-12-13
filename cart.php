@@ -29,8 +29,12 @@
 
                 <?php
                     if (!empty($_SESSION['cart'])) {
-                        $item_list = implode(",", $_SESSION['cart']);
-                        $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$item_list.")";
+                        $str = "";
+                        foreach ($_SESSION['cart']['id'] as $id) {
+                            $str .= $id + ",";
+                        }
+                        $str = trim($str, ',');
+                        $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$str.")";
                         $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
                         $total = 0.0;
                         if ($response_cart) {
