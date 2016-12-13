@@ -31,9 +31,9 @@
                     if (!empty($_SESSION['cart'])) {
                         $str = "";
                         foreach ($_SESSION['cart']['id'] as $id) {
-                            $str .= $id + ",";
+                            $str .= $id . ",";
                         }
-                        $str = trim($str, ',');
+                        $str = rtrim($str, ',');
                         $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$str.")";
                         $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
                         $total = 0.0;

@@ -145,9 +145,9 @@
                                 if (!empty($_SESSION['cart']["id"])) {
                                     $str = "";
                                     foreach ($_SESSION['cart']['id'] as $id) {
-                                        $str .= $id + ",";
+                                        $str .= $id . ",";
                                     }
-                                    $str = trim($str, ',');
+                                    $str = rtrim($str, ',');
                                     //echo var_dump($_SESSION['cart']['id']);
                                     //$item_list = implode(",", array_column($_SESSION['cart'], 'id'));
                                     echo '<script>alert("str:'. $str .'")</script>';
