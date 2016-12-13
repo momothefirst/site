@@ -148,10 +148,8 @@
                                         $str .= $id . ",";
                                     }
                                     $str = rtrim($str, ',');
-                                    //echo var_dump($_SESSION['cart']['id']);
-                                    //$item_list = implode(",", array_column($_SESSION['cart'], 'id'));
-                                    echo '<script>alert("str:'. $str .'")</script>';
-                                    echo '<script>alert("id:'. $_SESSION['cart']['id'][0] .'")</script>';
+                                    //echo '<script>alert("str:'. $str .'")</script>';
+                                    //echo '<script>alert("id:'. $_SESSION['cart']['id'][0] .'")</script>';
                                     $query_cart = "SELECT id, nome, price, img FROM products WHERE id IN (".$str.")";
                                     $response_cart = @mysqli_query($dbc, $query_cart) or die ("could not search!");
                                     $total = 0;
