@@ -25,6 +25,7 @@
 				    while($row = $result->fetch_assoc()) {
 				        if ($password == $row["password"]) {
                             $_SESSION["user"] = $row["username"];
+                            $_SESSION["email"] = $row["email"];
                             $_SESSION["logged"] = 1;
                             echo '<script>alert("success em logged true")</script>';
                             header("location: index.php");
