@@ -162,11 +162,16 @@ img {
     padding: 10px;
 }
 
+.cartlistOut {
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .cartlist {
-    padding-top: 20px;
+    padding: 20px;
     margin-top: 20px;
     margin-right: 0px;
-    padding-bottom: 20px;
     background-color: beige !important;
 }
 
@@ -192,6 +197,44 @@ img {
     font-weight: bold !important;
     background: limegreen !important; 
     color: white !important;
+    float: right;
+}
+
+.checkout_btn_cart {
+    margin-left: 20px;
+    margin-top: 30px;
+    display: block;
+    padding: 5px;
+     
+    font-weight: bold !important;
+    background: limegreen !important; 
+    color: white !important;
+}
+
+.checkoutlist {
+    padding: 20px !important;
+}
+
+.insidechecklist1 {
+    padding: 20px;
+    background-color: beige;
+}
+
+.insidechecklist2 {
+    padding: 20px;
+    background-color: palegreen;
+}
+
+.checkout_page {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .seecart {
@@ -202,16 +245,6 @@ img {
     margin-bottom: 20px !important;
 }
 
-.carttotal {
-    display: block;
-    color: white;
-    float: right;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    
-}
-
 .total {
     font-weight: bold;
 }
@@ -220,6 +253,10 @@ img {
     font-weight: bold;
     padding-bottom: 20px;
     color: black;
+    float: right;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 div .success {
@@ -306,6 +343,11 @@ div .success {
     height: 60px;
     width: 100%;
     background-color: cornflowerblue;
+}
+
+.finalbtn {
+    margin-top: 20px;
+    width: 100% !important;
 }
 
 .glyphicon {
