@@ -63,15 +63,15 @@
             <div class="col-sm-6 checkoutlist">
                 <div class="row">
                     <div class="insidechecklist2">
-                        <p>Tem a certeza que deseja concluir a sua encomenda? Iremos usar os dados fornecidos na criação da sua conta para envio dos produtos à cobrança. Qualquer alteração, estamos disponíves por email em suporte@primetek.pt</p>
+                        <p>Tem a certeza que deseja concluir a sua encomenda? Vamos usar os dados fornecidos na criação da sua conta para envio dos produtos à cobrança. Para qualquer alteração ou cancelamento, estamos disponíveis por email em <a href="mailto:encomendas@primetek.pt" style="color: orange;">encomendas@primetek.pt</a></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 ">
-                        <button class="btn btn-default finalbtn" type="submit" style="background-color: limegreen;">Concluir encomenda</button> 
+                        <button class="btn btn-default finalbtn conclude" type="submit" style="background-color: limegreen; color: white;">Concluir encomenda</button> 
                     </div>
                     <div class="col-md-6 ">
-                        <button class="btn btn-default finalbtn" type="submit" style="background-color: lightgray;">Voltar ao carrinho</button>
+                        <button class="btn btn-default finalbtn back" type="submit" style="background-color: dodgerblue; color: white;">Voltar ao carrinho</button>
                     </div>
                 </div>
             </div>
@@ -80,6 +80,23 @@
     </div>
     <?php include 'footer.php'; ?>  
 </div>
+    
+<?php 
+    if (isset($_SESSION["logged"])) {
+        echo "<script>$('.conclude').click(function() {";
+        echo '$.get("orders.php");';
+        echo 'location.href = "index.php";';
+        echo 'alert("A sua encomenda foi concluída! Obrigado por nos ter escolhido.");';
+        echo '$.get("cleancart.php");';
+        echo 'return false;';
+        echo '});</script>';
+    } else {
+        echo "<script>$('.conclude').click(function() {";
+        echo 'location.href = "checkout_err.php";';
+        echo '});</script>';
+    }
+    
+?>   
             
             
 </body>

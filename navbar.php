@@ -173,7 +173,7 @@
                                 if (!empty($_SESSION['cart']))
                                     echo number_format($total, 2); 
                             ?>€</li><br>
-                            <li><button class="checkout_btn btn btn-default">Checkout</button></li>
+                            <li><a href="checkout.php"><button class="checkout_btn btn btn-default">Checkout</button></a></li>
                         </div>
                     </ul>
                 </li>
