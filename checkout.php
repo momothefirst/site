@@ -63,7 +63,7 @@
             <div class="col-sm-6 checkoutlist">
                 <div class="row">
                     <div class="insidechecklist2">
-                        <p>Tem a certeza que deseja concluir a sua encomenda? Vamos usar os dados fornecidos na criação da sua conta para envio dos produtos à cobrança. Para qualquer alteração ou cancelamento, estamos disponíves por email em <a href="mailto:encomendas@primetek.pt" style="color: orange;">encomendas@primetek.pt</a></p>
+                        <p>Tem a certeza que deseja concluir a sua encomenda? Vamos usar os dados fornecidos na criação da sua conta para envio dos produtos à cobrança. Para qualquer alteração ou cancelamento, estamos disponíveis por email em <a href="mailto:encomendas@primetek.pt" style="color: orange;">encomendas@primetek.pt</a></p>
                     </div>
                 </div>
                 <div class="row">
@@ -81,15 +81,22 @@
     <?php include 'footer.php'; ?>  
 </div>
     
-<script>
-     $('.conclude').click(function() {
-        $.get("orders.php");
-        location.href = "index.php";
-        alert("A sua encomenda foi concluída! Obrigado por nos ter escolhido.")
-        $.get("cleancart.php");
-        return false;        
-    });
-</script>
+<?php 
+    if (isset($_SESSION["logged"])) {
+        echo "<script>$('.conclude').click(function() {";
+        echo '$.get("orders.php");';
+        echo 'location.href = "index.php";';
+        echo 'alert("A sua encomenda foi concluída! Obrigado por nos ter escolhido.");';
+        echo '$.get("cleancart.php");';
+        echo 'return false;';
+        echo '});</script>';
+    } else {
+        echo "<script>$('.conclude').click(function() {";
+        echo 'location.href = "checkout_err.php";';
+        echo '});</script>';
+    }
+    
+?>   
             
             
 </body>

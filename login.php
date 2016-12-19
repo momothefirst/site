@@ -17,7 +17,7 @@
 
         if (empty($data_missing)) {
 	        	require_once('connect.php');
-	          	$query = "SELECT email, password, username FROM users WHERE email = '" . $email . "'";
+	          	$query = "SELECT idusers, email, password, username FROM users WHERE email = '" . $email . "'";
 			  	$result = $dbc->query($query);	
 
 			  	if ($result->num_rows > 0) {
@@ -27,6 +27,7 @@
                             $_SESSION["user"] = $row["username"];
                             $_SESSION["email"] = $row["email"];
                             $_SESSION["logged"] = 1;
+                            $_SESSION["iduser"] = $row["idusers"];
                             echo '<script>alert("success em logged true")</script>';
                             header("location: index.php");
                             exit;

@@ -159,7 +159,7 @@ img {
 
 .cartmenu {
     width: 250px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .cartlistOut {
@@ -194,6 +194,7 @@ img {
 }
 
 .checkout_btn {
+    margin-bottom: 15px !important;
     font-weight: bold !important;
     background: limegreen !important; 
     color: white !important;
@@ -263,6 +264,19 @@ img {
 
 div .success {
     font-family: sans-serif;
+}
+
+.errorpage {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background-color: orangered;
 }
 
 .content .end {
